@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 const details = require("./details.json");
 
 const app = express();
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "*" })); 
 app.use(bodyParser.json());
 
 app.listen(3000, () => {
@@ -45,6 +45,23 @@ async function sendMail(user, callback) {
     to: user.email, // list of receivers
     subject: "Wellcome to Fun Of Heuristic 👻", // Subject line
     html: `<h2>Hello ${user.name}</h2><br>
+    <table style="width:100%">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
     <h4>Thanks for joining us <br>
     from ${user.date}
     Varuna Integrated logisitic Port Ltd..
