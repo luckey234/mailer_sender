@@ -53,7 +53,7 @@ async function sendMail(user, callback) {
   </tr>
   <tr>
     <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
+    <td>Maria Anders</td>                   
     <td>Germany</td>
   </tr>
   <tr>
