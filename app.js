@@ -15,10 +15,10 @@ app.listen(3000, () => {
 
 app.get("/", (req, res) => {
   res.send(
-    "<h1 style='text-align: center'>Wellcome to FunOfHeuristic <br><br>😃👻😃👻😃👻😃👻😃</h1>"
+    "<h1 style='text-align: center'>welcome to mail learning plateform.<br><br>😃👻😃👻😃👻😃👻😃</h1>"
   );
 });
-
+// https://mailer-sender-six.vercel.app/sendmail
 app.post("/sendmail", (req, res) => {
   console.log("request came");
   let user = req.body;
@@ -41,9 +41,9 @@ async function sendMail(user, callback) {
   });
 
   let mailOptions = {
-    from: "luckypandeyji2@gmail.com", // sender address
+    from: "luckey Pandey", // sender address
     to: user.email, // list of receivers
-    subject: "Wellcome to Fun Of Heuristic 👻", // Subject line
+    subject: "Wellcome to Fun Of Alexxender 👻", // Subject line
     html: `<h2>Hello ${user.name}</h2><br>
     <table style="width:100%">
   <tr>
